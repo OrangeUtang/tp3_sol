@@ -1,0 +1,21 @@
+CREATE table users(
+id INTEGER(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+username VARCHAR(25) UNIQUE NOT NULL,
+email VARCHAR(25) UNIQUE NOT NULL,
+pw VARCHAR(25) NOT NULL,
+isAdmin BOOLEAN NOT NULL
+);
+
+CREATE table products(
+id INTEGER(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+productname VARCHAR(25) NOT NULL,
+price NUMERIC(5, 2) NOT NULL
+);
+
+INSERT INTO users (username, email, pw, isAdmin) VALUES ('PaulBlart', 'PB@gmail.com','helloIamPaul', true);
+INSERT INTO users (username, email, pw, isAdmin) VALUES ('BobbyWhisky', 'BBwhisk@hotmail.com','bob', false);
+INSERT INTO users (username, email, pw, isAdmin) VALUES ('RuPaul', 'yaassRP@gmail.com','helloGirls', false);
+
+INSERT INTO products (productname, price) VALUES ('beyblades', 3.99);
+INSERT INTO products (productname, price) VALUES ('objeta40', 39.99);
+INSERT INTO products (productname, price) VALUES ('Lettuce', 1);
